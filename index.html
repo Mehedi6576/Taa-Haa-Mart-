@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taa-Haa Mart</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; padding: 0; background: #f8f8f8; }
+        header { background: #4CAF50; color: white; padding: 20px; text-align: center; }
+        nav { background: #333; color: white; padding: 10px; text-align: center; }
+        nav a { color: white; margin: 10px; text-decoration: none; }
+        .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
+        .product { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); text-align: center; }
+        footer { background: #222; color: white; padding: 20px; text-align: center; }
+        button { background: #4CAF50; color: white; border: none; padding: 10px; margin-top: 10px; cursor: pointer; }
+        form { background: white; padding: 20px; margin: 20px auto; max-width: 500px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+        form input, form select, form textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; }
+        form button { width: 100%; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Taa-Haa Mart</h1>
+        <p>বিশ্বস্ত পণ্য ঘরে বসে</p>
+    </header>
+    <nav>
+        <a href="#products">পণ্যসমূহ</a>
+        <a href="#order">অর্ডার</a>
+        <a href="#contact">যোগাযোগ</a>
+    </nav>
+
+    <section id="products" class="products">
+        <div class="product">
+            <h3>আম</h3>
+            <img src="https://via.placeholder.com/150" alt="আম">
+            <p>সরাসরি রাজশাহী থেকে আনা।</p>
+        </div>
+        <div class="product">
+            <h3>খেজুরের গুড়</h3>
+            <img src="https://via.placeholder.com/150" alt="গুড়">
+            <p>বিশুদ্ধ খেজুরের রস থেকে তৈরি।</p>
+        </div>
+        <div class="product">
+            <h3>চাল</h3>
+            <img src="https://via.placeholder.com/150" alt="চাল">
+            <p>উন্নতমানের দেশি চাল।</p>
+        </div>
+        <div class="product">
+            <h3>মুড়ি</h3>
+            <img src="https://via.placeholder.com/150" alt="মুড়ি">
+            <p>ঝরঝরে ও সুস্বাদু মুড়ি।</p>
+        </div>
+    </section>
+
+    <section id="order">
+        <h2 style="text-align:center">অর্ডার ফর্ম</h2>
+        <form action="https://formspree.io/f/mvgazlvk" method="POST">
+            <label for="name">নাম:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">ফোন নম্বর:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="product">পণ্য নির্বাচন করুন:</label>
+            <select id="product" name="product">
+                <option value="আম">আম</option>
+                <option value="খেজুরের গুড়">খেজুরের গুড়</option>
+                <option value="চাল">চাল</option>
+                <option value="মুড়ি">মুড়ি</option>
+            </select>
+
+            <label for="quantity">পরিমাণ:</label>
+            <input type="text" id="quantity" name="quantity" placeholder="যেমনঃ ২ কেজি">
+
+            <label for="address">ঠিকানা:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+            <label for="payment">পেমেন্ট পদ্ধতি:</label>
+            <select id="payment" name="payment">
+                <option value="bKash">bKash</option>
+                <option value="Rocket">Rocket</option>
+                <option value="Nagad">Nagad</option>
+            </select>
+
+            <button type="submit">অর্ডার সাবমিট করুন</button>
+        </form>
+    </section>
+
+    <footer id="contact">
+        <h2>যোগাযোগ করুন</h2>
+        <p>ফোন: 01322678467</p>
+        <p>পেমেন্ট: bKash, Rocket, Nagad</p>
+    </footer>
+</body>
+</html>
