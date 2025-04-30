@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taa-Haa Mart</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #2e7d32;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .product {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .product h2 {
+      font-size: 1.2em;
+      margin: 10px 0 5px;
+    }
+    .product p {
+      font-size: 1em;
+      margin: 5px 0;
+    }
+    form {
+      background: white;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    form button {
+      background: #2e7d32;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #27682a;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2e7d32;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Taa-Haa Mart</h1>
+    <p>বিশ্বস্ত ঘরের বাজার — আম, খেজুরের গুড়, চাল, পিঠা, আর আরও অনেক কিছু</p>
+  </header>
+
+  <section class="products">
+    <div class="product">
+      <img src="https://i.ibb.co/Xk1zGyS/mango.jpg" alt="আম">
+      <h2>রাজশাহীর গোপালভোগ আম</h2>
+<button onclick="orderNow('রাজশাহীর গোপালভোগ আম')" style="margin-top:10px;background:#007BFF;color:white;border:none;padding:8px 15px;border-radius:6px;cursor:pointer;">অর্ডার করুন</button>
+
+      <p>দাম: ১৫০ টাকা/কেজি</p>
+    </div>
+    <div class="product">
+      <img src="https://i.ibb.co/6szmXxY/molasses.jpg" alt="খেজুরের গুড়">
+      <h2>খাঁটি খেজুরের গুড়</h2>
+<button onclick="orderNow('খাঁটি খেজুরের গুড়')" style="margin-top:10px;background:#007BFF;color:white;border:none;padding:8px 15px;border-radius:6px;cursor:pointer;">অর্ডার করুন</button>
+
+      <p>দাম: ২০০ টাকা/কেজি</p>
+    </div>
+    <div class="product">
+      <img src="https://i.ibb.co/6YGyhNT/rice.jpg" alt="চাল">
+      <h2>পোলাও চাল</h2>
+<button onclick="orderNow('পোলাও চাল')" style="margin-top:10px;background:#007BFF;color:white;border:none;padding:8px 15px;border-radius:6px;cursor:pointer;">অর্ডার করুন</button>
+
+      <p>দাম: ৬০ টাকা/কেজি</p>
+    </div>
+  </section>
+
+  <form action="https://formspree.io/f/mvgazlvk" method="POST">
+    <h2>অর্ডার ফর্ম</h2>
+    <input type="text" name="name" placeholder="আপনার নাম" required>
+    <input type="text" name="phone" placeholder="মোবাইল নাম্বার" required>
+    <textarea name="order" rows="4" placeholder="আপনার অর্ডার (যেমনঃ ৫ কেজি আম)" required></textarea>
+    <input type="text" name="address" placeholder="ডেলিভারি ঠিকানা" required>
+    <button type="submit">অর্ডার করুন</button>
+  </form>
+
+  <div style="text-align:center; margin: 30px;"><a href="payment.html" style="background:#2e7d32;color:white;padding:10px 20px;border-radius:8px;text-decoration:none;">পেমেন্ট নির্দেশনা</a></div>
+<footer>
+    <p>যোগাযোগ: 01322678467 | Taa-Haa Mart</p>
+  </footer>
+
+<script>
+function orderNow(productName) {
+  document.getElementById('product').value = productName;
+  document.getElementById('order-form').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
+<script>
+function orderNow(productName) {
+  document.getElementById('product').value = productName;
+  document.getElementById('order-form').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
